@@ -9,7 +9,57 @@
 </head>
 
 <body>
-  Hello world
+  <h1 class="titre">Répertoire de contact</h1>
+  <div class="content">
+      <section class="form-wrapper">
+        <form action="">
+          <h2 class="titre-form">Formulaire de contact</h2>
+          <div class="text-inputs">
+            <label for="prenom">Prénom</label><br>
+            <input type="text" id="prenom"><br>
+            <label for="nom">Nom</label><br>
+            <input type="text" id="nom"><br>
+            <label for="groupe">Groupe</label><br>
+            <select name="" id="groupe">
+              <option value="" class="option empty-value" selected></option>
+              <option value="Ami" class="option option-ami">Ami</option>
+              <option value="Famille" class="option option-famille">Famille</option>
+              <option value="Collègue" class="option option-collegue">Collègue</option>
+              <option value="Connaissance" class="option option-connaissance">Connaissance</option>
+            </select><br>
+            <label for="bio">Bio</label><br>
+            <textarea name="" id="bio" cols="30" rows="10"></textarea><br>
+          </div>
+          <div class="button-inputs">
+            <div class="file-input-wrapper">
+              <input type="file" name="" value="Choisir un fichier" id="file-input">
+            </div>
+            <div class="buttons-wrapper">
+              <input type="submit" class="submit-button" value="Créer">
+              <input type="reset"  class="reset-button" value="Réinit.">
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="liste-de-contact-wrapper">
+        <h2 class="titre-ls-contact">Liste de contact</h2>
+          <article class="contact contact-1">
+            
+            <div class="contact-picture"><img src="photo-directeur.png" alt="photo de "></div>
+            <div class="contact-infos">
+              <p class="noms"><span class="prenom">Prénom</span>&nbsp<span class="nom">Nom</span></p>
+              <p class="groupe">Groupe</p>
+              <p class="bio">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, qui odio debitis 
+                quasi commodi, nam, ullam iure tempore similique tempora velit eveniet quibusdam? Ad 
+                earum voluptatum expedita labore facilis quo sed sapiente ducimus beatae molestiae error 
+                minima consequatur aliquid, impedit veniam. Molestias autem necessitatibus alias 
+                molestiae harum quaerat? Corporis, recusandae?
+              </p>
+            </div>
+          </article>
+      </section>
+  </div>
   <script src="script.js"></script>
 </body>
 
