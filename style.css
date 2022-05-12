@@ -79,6 +79,17 @@ input, select, textarea, #file-input{
 }
 .file-input-wrapper{
   height: 8em;
+  margin-bottom: 1em;
+}
+.img-preview-container{
+  width: 8em;
+  height: 8em;
+  float: right;
+}
+.img-preview-container img{
+  height: 100%;
+  width: 100%;
+  display: none;
 }
 .buttons-wrapper{
   /*text-align: center;*/
@@ -104,6 +115,7 @@ input, select, textarea, #file-input{
   height: 9em;
   border: 1px solid #b9d1f2;
   position: relative;
+  cursor: pointer;
 }
 .cross-sign{
   position: absolute;
@@ -132,6 +144,7 @@ input, select, textarea, #file-input{
 }
 .contact-infos{
   width: 90%;
+  height: auto;
 }
 .contact-infos p{
   margin: 0.5em 0em;
