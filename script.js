@@ -1,12 +1,12 @@
 const form = document.querySelector("form");
 let modifying = false;
 let elementToModify = "";
+let imgPreview = document.querySelector(".img-preview");
 document.querySelector("#contact-image").addEventListener("change",function(event){
-    let imgPreview = document.querySelector(".img-preview");
+
         const [file] = this.files;
         if (file) {
           imgPreview.src = URL.createObjectURL(file);
-          //imgPreview.style.display = "block";
           imgPreview.setAttribute("style","display : block");
         }
       
@@ -33,7 +33,7 @@ form.addEventListener('submit', function(event){
     let contactImg = document.createElement("img");
     contactImg.setAttribute("class","contact-image");
     let fileInput = document.querySelector("#contact-image");
-    contactImg.setAttribute("src",fileInput.files[0].name);
+    contactImg.setAttribute("src",imgPreview.src);
     divContactPicture.appendChild(contactImg);
     articleContact.appendChild(divContactPicture);
 
@@ -85,6 +85,8 @@ form.addEventListener('submit', function(event){
 
             }
         }
+        imgPreview.src = contactImg.src;
+        imgPreview.setAttribute("style","display : block");
         modifying = true;
         elementToModify = this;
 
@@ -104,6 +106,8 @@ if(modifying){
 }
 
 /************************* ************************************/
+imgPreview.src = "";
+imgPreview.setAttribute("style","display : none");
 this.reset();
    
 });
